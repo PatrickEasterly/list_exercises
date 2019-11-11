@@ -44,3 +44,12 @@
 #         new_list.append(x)
 # print(new_list)
 
+# given a list of numbers and a factor, multiply each item by factor. 
+# put that in a new list
+
+my_list = [5, 6, 2, 1, 9, -15, -23]
+factor = 4
+new_list = []
+for x in my_list:
+        
+print(new_list)
