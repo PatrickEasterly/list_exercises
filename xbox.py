@@ -7,7 +7,9 @@ def xbox(name):
     name = name.replace("T", "7")
     name = name.replace("S", "5")
     name = name.replace("O", "0")
-    name = "xX" + name + "Xx"
+    name = name.replace("A", "4")
+    name = name.replace("G", "6")
+
     return name
 name = input("Write your xbox gamertag. ")
 name = xbox(name)
