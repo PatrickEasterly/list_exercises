@@ -203,63 +203,83 @@
 # change maker, with QuikTrip output
 
 
-def change_maker(charge, given):
-    change = given - charge
-    # declare bills and coins, set them to zero
-    ones, fives, tens, twentys, fiftys, hundreds, quarters, dimes, nickles, pennies = (0,)*10
-    # down the line
-    while change != 0:
-        if change > 100:
-            hundreds += 1
-            change -= 100
-        if change < 100 and change >= 50:
-            fiftys += 1
-            change -= 50
-        if change < 50 and change >= 20:
-            twentys += 1
-            change -= 20
-        if change < 20 and change >= 10:
-            tens += 1
-            change -= 10
-        if change < 10 and change >= 5:
-            fives += 1
-            change -= 5
-        if change < 5 and change >= 1:
-            ones += 1
-            change -= 1
+# def change_maker(charge, given):
+#     change = given - charge
+#     # declare bills and coins, set them to zero
+#     ones, fives, tens, twentys, fiftys, hundreds, quarters, dimes, nickles, pennies = (0,)*10
+#     # down the line
+#     while change != 0:
+#         if change > 100:
+#             hundreds += 1
+#             change -= 100
+#         if change < 100 and change >= 50:
+#             fiftys += 1
+#             change -= 50
+#         if change < 50 and change >= 20:
+#             twentys += 1
+#             change -= 20
+#         if change < 20 and change >= 10:
+#             tens += 1
+#             change -= 10
+#         if change < 10 and change >= 5:
+#             fives += 1
+#             change -= 5
+#         if change < 5 and change >= 1:
+#             ones += 1
+#             change -= 1
 
-        if change < 1 and change >= 0.25:
-            quarters += 1
-            change -= 0.25
-            change = round(change, 2) 
-        if change < 0.25 and change >= 0.10:
-            dimes += 1
-            change -= 0.1
-            change = round(change, 2)     
-        if change < 0.10 and change >= 0.05:
-            nickles += 1
-            change -= 0.05
-            change = round(change, 2) 
-        if change < 0.05 and change >= 0.01:
-            pennies += 1
-            change -= 0.01
-            change = round(change, 2)       
+#         if change < 1 and change >= 0.25:
+#             quarters += 1
+#             change -= 0.25
+#             change = round(change, 2) 
+#         if change < 0.25 and change >= 0.10:
+#             dimes += 1
+#             change -= 0.1
+#             change = round(change, 2)     
+#         if change < 0.10 and change >= 0.05:
+#             nickles += 1
+#             change -= 0.05
+#             change = round(change, 2) 
+#         if change < 0.05 and change >= 0.01:
+#             pennies += 1
+#             change -= 0.01
+#             change = round(change, 2)       
      
-    print(f'Change: {change}')
-    print(f'Ones: {ones}')
-    print(f'Fives: {fives}')
-    print(f'Tens: {tens}')
-    print(f'Twentys: {twentys}')
-    print(f'Fiftys: {fiftys}')
-    print(f'Hundreds: {hundreds}')
-    print(f'Quarters: {quarters}')
-    print(f'Dimes: {dimes}')
-    print(f'Nickles: {nickles}')
-    print(f'Pennies: {pennies}')
+#     print(f'Change: {change}')
+#     print(f'Ones: {ones}')
+#     print(f'Fives: {fives}')
+#     print(f'Tens: {tens}')
+#     print(f'Twentys: {twentys}')
+#     print(f'Fiftys: {fiftys}')
+#     print(f'Hundreds: {hundreds}')
+#     print(f'Quarters: {quarters}')
+#     print(f'Dimes: {dimes}')
+#     print(f'Nickles: {nickles}')
+#     print(f'Pennies: {pennies}')
 
-    # turple = ((ones, fives, tens, twentys, fiftys, hundreds),(pennies, nickles, dimes, quarters))
-    # print(turple)
+#     # turple = ((ones, fives, tens, twentys, fiftys, hundreds),(pennies, nickles, dimes, quarters))
+#     # print(turple)
 
-cashier = float(input('Your total today is: $'))
-customer = float(input('Ok, here\'s $'))
-change_maker(cashier, customer)
+# cashier = float(input('Your total today is: $'))
+# customer = float(input('Ok, here\'s $'))
+# change_maker(cashier, customer)
+
+# change value
+
+# def value_of_change(change):
+#     total = 0
+#     total += change[0][0]
+#     total += change[0][1] * 5
+#     total += change[0][2] * 10
+#     total += change[0][3] * 20
+#     total += change[0][4] * 50
+#     total += change[0][5] * 100
+#     total += change[1][0] * 0.01
+#     total += change[1][1] * 0.05
+#     total += change[1][2] * 0.1
+#     total += change[1][3] * 0.25
+
+#     print(total)
+
+# value_of_change(((3, 0, 1, 1, 0, 1), (4, 1, 0, 2)
+# ))
