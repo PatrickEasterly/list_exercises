@@ -41,13 +41,18 @@ while playing == True:
     Final message: {answer}
     ''')
     keep_playing = (input('Would you like to encrypt anything else? (Y/N) ')).lower()[0]
-    try:
+    valid = False
+    while valid == False:
         if keep_playing == 'y':
             playing = True
+            valid = True
         elif keep_playing == 'n':
             playing = False
-    except keep_playing != 'y' or 'n':
-        print('Neigh')
+            valid = True
+        elif keep_playing != 'y' or 'n':
+            keep_playing = input('Please enter a valid selection (y/n) ')
+            valid = False
+        keep_playing = input('Please enter a valid selection (y/n) ')
     # else: 
     #     print('Play by my rules or don\'t play. ')
     #     playing = False
