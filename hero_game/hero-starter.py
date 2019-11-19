@@ -10,13 +10,13 @@ In this simple RPG game, the hero fights the goblin. He has the options to:
 """
 
 def main():
-    pat = Hero()
-    gobbles = Goblin()
-    while gobbles.is_alive() and pat.is_alive():
+    pat = Hero('Pat')
+    gobbles = Goblin('gobbles')
+    while gobbles.is_alive and pat.is_alive:
         # print("You have %d health and %d power." % (pat.health, pat.power))
-        print(pat.health_status())
+        print(pat.health_power_status())
         # print("The gobbles has %d health and %d power." % (gobbles.health, gobbles.power))
-        print(gobbles.health_status())
+        print(gobbles.health_power_status())
         print()
         print("What do you want to do?")
         print("1. fight gobbles")
@@ -33,8 +33,9 @@ def main():
             break
         else:
             print("Invalid input %r" % user_input)
-
         if gobbles.health > 0:
             gobbles.attack(pat)
+        pat.die()
+        gobbles.die()
 
 main()

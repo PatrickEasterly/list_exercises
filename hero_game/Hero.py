@@ -1,14 +1,19 @@
 from Character import Character
 class Hero(Character):
-    def __init__(self):
-        self.health = 10
-        self.power = 5
-        self.type = 'Hero'
-    def attack(self, goblin):
-            goblin.health -= self.power
-            print("You do %d damage to the Gobbles." % self.power)
-            if goblin.health <= 0:
-                print("The Gobbles is dead.")
+    def __init__(self, name):
+        super().__init__(name, 10, 5)
+
+
+
+    # def __init__(self):
+    #     self.health = 10
+    #     self.power = 5
+    #     self.type = 'Hero'
+    # def attack(self, goblin):
+    #         goblin.health -= self.power
+    #         print("You do %d damage to the Gobbles." % self.power)
+    #         if goblin.health <= 0:
+    #             print("The Gobbles is dead.")
     # def is_alive(self):
     #     return self.health > 0
 
