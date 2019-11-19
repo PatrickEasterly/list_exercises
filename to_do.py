@@ -7,16 +7,16 @@
     ###
 
 #keep track of todos
-todo_list = []
+todo_list = ['sample', 'list']
 
 #print todos
 
 def print_todos():
     # print('\n')
     if todo_list == []:
-        print('You have nothing to do. ')
-    for todo in todo_list:
-        print(todo)
+        print('\nYou have nothing to do. ')
+    for count, todo in enumerate(todo_list):
+        print(f'\n{count}: {todo}')
 #add todos
 
 def add_todo(todo): 
@@ -30,7 +30,7 @@ def delete_todo(index):
     try:
         todo_list.pop(index)
     except IndexError:
-        print('Sorry, no todo at that index.')
+        print('\nSorry, no todo at that index.')
         
 
 
@@ -46,16 +46,17 @@ def main():
     is_running = True
     while is_running == True:
         print(menu)
-        choice = input('Choose one: ')
+        choice = input('\nChoose one: ')
         if choice == '0':
             is_running = False
         elif choice == '1':
             print_todos()
         elif choice == '2':
-            todo = input('Your todo: ')
-            add_todo(todo)
+            new_todo = input('What do you need todo? : ')
+            add_todo(new_todo)
         elif choice == '3':
-            pass
+            delete = int(input('Complete which todo? '))
+            delete_todo(delete)
         else:
             print('\nPlease enter a valid choice')
 
